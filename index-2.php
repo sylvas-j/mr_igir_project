@@ -41,29 +41,9 @@
 </div>
 
 
-<?php 
-
-  //this insert data in my data base
-$dsn1='localhost';
-$user= 'root';
-$password='';  
-$dbname  = 'mr_igiri_project';
-
-$conn = new mysqli($dsn1, $user, $password, $dbname);
-
-
-
-  // $conn = new mysqli("localhost", "root", "comment");
-  if($conn->connect_error){
-    echo 'Connection Failed----'.$conn->connect_error;
-  }else{
-    // echo "posting this is also working";
-  };
-
-
- ?>
 
 <?php
+require 'config.php';
 // define variables and set to empty values
 
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -93,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // echo $row['fname'];
 echo '
     <tr>
-      <td scope="row">1</th>
+      <td scope="row">'.$row['id'].'</th>
       <td>'.$row['fname'].'</td>
       <td>'.$row['lname'].'</td>
       <td>'.$row['mat_no'].'</td>
