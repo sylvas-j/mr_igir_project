@@ -87,7 +87,7 @@ function test_input($data) {
 </style>
 </head>
 <body>  
-
+<div class="container">
 <p><a href="index-2.php">View Your Info</a></p>
 
 
@@ -135,6 +135,7 @@ echo $comment;
 echo "<br>";
 echo $gender;
 ?>
+</div>
 
 </body>
 </html>

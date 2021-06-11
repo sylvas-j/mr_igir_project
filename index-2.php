@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<div class="container">
   <p><a href="index.php">Enter Your Info Here</a></p>
 
 <form action="index-2.php" method="post">
@@ -37,6 +38,7 @@
   </div>
 </form>
 
+</div>
 
 
 <?php 
