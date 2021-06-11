@@ -35,7 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $matno = test_input($_POST["matno"]);
   // $gender = test_input($_POST["gender"]);
 
-  if($fname == "" && $lname == "" && $matno == ""){
+
+  if($fname != "" && $lname != "" && $matno != ""){
     // echo "hmmmmmmmmm";
     // echo $fname;
   // $fname = test_input($_POST["fname"]);
