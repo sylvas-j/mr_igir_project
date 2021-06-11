@@ -13,7 +13,7 @@ $conn = new mysqli($dsn1, $user, $password, $dbname);
 
   // $conn = new mysqli("localhost", "root", "comment");
   if($conn->connect_error){
-    die('Connection Failed'.$conn->connect_error);
+    echo 'Connection Failed----'.$conn->connect_error;
   }else{
     // echo "posting this is also working";
   };
