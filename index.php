@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $fname = test_input($_POST["fname"]);
   $lname = test_input($_POST["lname"]);
   $address = test_input($_POST["address"]);
-  $com = test_input($_POST["com"]);
+  $comment = test_input($_POST["com"]);
   $matno = test_input($_POST["matno"]);
   $age = test_input($_POST["age"]);
   // $gender = test_input($_POST["gender"]);

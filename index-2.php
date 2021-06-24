@@ -28,6 +28,13 @@
       <option value="all_fname">Select All First Name</option>
       <option value="all_lname">Select All Last Name</option>
       <option value="all_mat">Select All Mat No.</option>
+
+      <option value="age_min">Minimum Age</option>
+      <option value="age_max">Maximum Age</option>
+      <option value="age_avg">Age Average</option>
+      <option value="age_sum">Sum Of Age</option>
+      <option value="total">Number of Members</option>
+
       <option value="all">Query The Whole Database</option>
       
     </select>
