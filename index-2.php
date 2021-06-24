@@ -66,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <th scope="col">Mat No</th>
       <th scope="col">Address</th>
       <th scope="col">Comment</th>
+      <th scope="col">Age</th>
     </tr>
   </thead>
     <tbody>';
@@ -79,6 +80,7 @@ echo '
       <td>'.$row['mat_no'].'</td>
       <td>'.$row['address'].'</td>
       <td>'.$row['comment'].'</td>
+      <td>'.$row['age'].'</td>
     </tr>';
       };
 echo '
