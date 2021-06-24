@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $address = test_input($_POST["address"]);
   $com = test_input($_POST["com"]);
   $matno = test_input($_POST["matno"]);
+  $age = test_input($_POST["age"]);
   // $gender = test_input($_POST["gender"]);
 
 
@@ -21,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // echo $fname;
   // $fname = test_input($_POST["fname"]);
 
-   $req = "INSERT INTO users (fname,lname, address,comment,mat_no) VALUES('$fname','$lname','$address','$comment','$matno')";
+   $req = "INSERT INTO users (fname,lname, address,comment,mat_no,age) VALUES('$fname','$lname','$address','$comment','$matno','$age')";
     $result = $conn->query($req);
 
     if($result == true){
@@ -92,9 +93,13 @@ function test_input($data) {
     placeholder="Place your comment about the project"></textarea>
   </div>
 
-    <div class="form-group">
+  <div class="form-group">
     <label for="matno">Mat No.</label>
     <input type="text" class="form-control" id="matno" name="matno" placeholder="Mat No." required="">
+  </div>
+  <div class="form-group">
+    <label for="matno">Age</label>
+    <input type="number" class="form-control" id="age" name="matno" placeholder="Enter Real or else ;)" required="">
   </div>
 
   <div class="form-group">
