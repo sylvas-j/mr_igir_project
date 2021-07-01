@@ -178,6 +178,132 @@ echo '
     }else{
       echo "Please Fill The Form Below To Be Identify In Dr Igiri Class";
     }
+    // MINIMUM AGE
+  }elseif($action == "age_min"){
+        $sub_status = "SELECT MIN(age) as age_min FROM users";
+    $status = $conn->query($sub_status);
+    if($status == true){
+      echo '<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Minimun Age</th>
+    </tr>
+  </thead>
+    <tbody>';
+      while($row = $status->fetch_assoc()){
+        // echo $row['mat_no'];
+echo '
+    <tr>
+      <td>'.$row['age_min'].'</td>
+    </tr>';
+      };
+echo '
+  </tbody>
+</table>';
+
+    }else{
+      echo "Please Fill The Form Below To Be Identify In Dr Igiri Class";
+    }
+  }elseif($action == "age_max"){
+        $sub_status = "SELECT MAX(age) as age_max FROM users";
+    $status = $conn->query($sub_status);
+    if($status == true){
+      echo '<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Maximum age</th>
+    </tr>
+  </thead>
+    <tbody>';
+      while($row = $status->fetch_assoc()){
+        // echo $row['mat_no'];
+echo '
+    <tr>
+      <td>'.$row['age_max'].'</td>
+    </tr>';
+      };
+echo '
+  </tbody>
+</table>';
+
+    }else{
+      echo "Please Fill The Form Below To Be Identify In Dr Igiri Class";
+    }
+  }elseif($action == "age_avg"){
+        $sub_status = "SELECT AVG(age) as age_avg FROM users";
+    $status = $conn->query($sub_status);
+    if($status == true){
+      echo '<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Age average</th>
+    </tr>
+  </thead>
+    <tbody>';
+      while($row = $status->fetch_assoc()){
+        // echo $row['mat_no'];
+echo '
+    <tr>
+      <td>'.$row['age_avg'].'</td>
+    </tr>';
+      };
+echo '
+  </tbody>
+</table>';
+
+    }else{
+      echo "Please Fill The Form Below To Be Identify In Dr Igiri Class";
+    }
+  }elseif($action == "age_sum"){
+        $sub_status = "SELECT SUM(age) as age_sum FROM users";
+    $status = $conn->query($sub_status);
+    if($status == true){
+      echo '<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Sum of age</th>
+    </tr>
+  </thead>
+    <tbody>';
+      while($row = $status->fetch_assoc()){
+        // echo $row['mat_no'];
+echo '
+    <tr>
+      <td>'.$row['age_sum'].'</td>
+    </tr>';
+      };
+echo '
+  </tbody>
+</table>';
+
+    }elseif($action == "total"){
+        $sub_status = "SELECT COUNT(age) as age_total FROM users";
+    $status = $conn->query($sub_status);
+    if($status == true){
+      echo '<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Total number of age</th>
+    </tr>
+  </thead>
+    <tbody>';
+      while($row = $status->fetch_assoc()){
+        // echo $row['mat_no'];
+echo '
+    <tr>
+      <td>'.$row['age_total'].'</td>
+    </tr>';
+      };
+echo '
+  </tbody>
+</table>';
+
+    }else{
+      echo "Please Fill The Form Below To Be Identify In Dr Igiri Class";
+    }
+  }else{
+      echo "Please Fill The Form Below To Be Identify In Dr Igiri Class";
+    }
   }else{
   echo "Please Select Action From The Dropdown Box";
 }
