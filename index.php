@@ -99,7 +99,7 @@ function test_input($data) {
   </div>
   <div class="form-group">
     <label for="matno">Age</label>
-    <input type="number" class="form-control" id="age" name="matno" placeholder="Enter Real or else ;)" required="">
+    <input type="number" class="form-control" id="age" name="age" placeholder="Enter Real or else ;)" required="">
   </div>
 
   <div class="form-group">
